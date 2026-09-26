@@ -19,6 +19,6 @@ class NetworkDevice:
         print(f"Device Type: {self.device_type}")
 
     def log_attributes(self):
-        msg = '[DEVICE_SUMMARY]: <{self.name}> (<{self.device_type}>) - <{self.ip_address}>'
+        msg = f"[DEVICE_SUMMARY]: {self.name} ({self.device_type}) - {self.ip_address}"
         print(msg)
         logging.info(f"LOG STRING: {msg}")

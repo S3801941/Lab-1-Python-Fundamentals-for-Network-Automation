@@ -6,7 +6,7 @@ from network_device import NetworkDevice
 
 def main():
     # Configure logging
-    logging.basicConfig(filename='network_device.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+    logging.basicConfig(filename='logs/lab.log', level=logging.INFO)
 
     # Create instances of NetworkDevice
     device1 = NetworkDevice("Router1", "192.168.1.1", "Router")
@@ -15,6 +15,8 @@ def main():
     # Summarize and log attributes of the devices
     device1.summarize()
     device2.summarize()
+    device1.log_attributes()
+    device2.log_attributes()
 
 if __name__ == "__main__":
     main()
