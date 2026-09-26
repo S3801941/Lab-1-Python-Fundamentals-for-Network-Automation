@@ -3,10 +3,11 @@
 # Lastly, we will log the attributes of a network device to a log file.
 
 import logging
-from symtable import Class
 
 
-Class NetworkDevice:
+
+class NetworkDevice:
+    
     def __init__(self, name, ip_address, device_type):
         self.name = name
         self.ip_address = ip_address
