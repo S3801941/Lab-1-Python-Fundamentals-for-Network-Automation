@@ -8,15 +8,9 @@ def main():
     # Configure logging
     logging.basicConfig(filename='logs/lab.log', level=logging.INFO)
 
-    # Create instances of NetworkDevice
-    device1 = NetworkDevice("Router1", "192.168.1.1", "Router")
-    device2 = NetworkDevice("Switch1", "192.168.1.2", "Switch")
+    pass
 
-    # Summarize and log attributes of the devices
-    device1.summarize()
-    device2.summarize()
-    device1.log_attributes()
-    device2.log_attributes()
+
 
 if __name__ == "__main__":
     main()
