@@ -18,6 +18,19 @@ except ImportError:
 
 class parser_utils:
 
-    def read_file ():
+    # This module will be for trying to opening up and reading the file from the data folder.
+    def __init__(self, yellow_brick_road):
+        self.yellow_brick_road = yellow_brick_road
+        try:
+            with open(yellow_brick_road, 'r') as brick_road:
+                road_brick = brick_road.read()
+        except FileExistsError:
+            msg = f"[Error]: The file {yellow_brick_road} does not exist."
+            print(msg)
+            logger.info(f"LOG STRING: {msg}")
+            return None
+
+    # This methode will parse JSON files.
+    def parse_JSON
 
         
