@@ -13,6 +13,9 @@ msg = 'LAB1-START'
 print(msg)
 logging.info(msg)
 
+msg = '[STEP 2] Dev Container Started'
+logging.info(msg)
+
 
 def main():
 
@@ -40,8 +43,8 @@ def main():
     # Parsing YAML files to get device information.
     lion = parser_utils.parser_utils('data/interfaces.yaml')
     courage = lion.parse_yaml()
-    lionheart_1 = f"Interface {courage['interfaces'][0]['name']} is {courage['interface'][0]['status']}"
-    lionheart_2 = f"Interface {courage['interfaces'][1]['name']} is {courage['interface'][1]['status']}"
+    lionheart_1 = f"Interface {courage['interfaces'][0]['name']} is {courage['interfaces'][0]['status']}"
+    lionheart_2 = f"Interface {courage['interfaces'][1]['name']} is {courage['interfaces'][1]['status']}"
     print("Interface Information")
     print("="*50)
     print(lionheart_1)
@@ -58,8 +61,8 @@ def main():
     #Parsing CSV files for inventory information.
     tin_man = parser_utils.parser_utils('data/inventory.csv')
     new_heart = tin_man.parse_csv()
-    heart_1 = f"Device {new_heart[1][0]} is a {new_heart[1][1]}{new_heart[1][2]}"
-    heart_2 = f"Device {new_heart[2][0]} is a {new_heart[2][1]}{new_heart[2][2]}"
+    heart_1 = f"Device {new_heart[0][0]} is a {new_heart[0][0]}{new_heart[0][2]}"
+    heart_2 = f"Device {new_heart[1][0]} is a {new_heart[1][1]}{new_heart[1][2]}"
     print("Inventory Information")
     print("="*50)
     print(heart_1)
@@ -73,8 +76,9 @@ def main():
     logging.info(f"DEVICE_MSG: {msg}")
 
 
+
     #Parsing XML file for vlan information.
-    dorothy = parser_utils.parser_utils('data/vlan.xml')
+    dorothy = parser_utils.parser_utils('data/vlans.xml')
     home = dorothy.parse_xml()
     print("VLAN Information")
     print("="*50)

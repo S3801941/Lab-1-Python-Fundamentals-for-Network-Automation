@@ -85,7 +85,7 @@ class parser_utils:
     def parse_csv(self):
         try:
             red_slippers = []
-            oz = csv.reader(self.yellow_brick_road.splitlines())
+            oz = csv.reader(self.road.splitlines())
             for munchkins in oz:
                 red_slippers.append(munchkins)
         except csv.Error as e:
