@@ -11,7 +11,7 @@ import csv
 import json
 import os
 import xml.etree.ElementTree as ET
-
+import yaml
 
 
 class parser_utils:
@@ -33,7 +33,7 @@ class parser_utils:
     # This methode will parse JSON files.
     def parse_json(self):
         try:
-            red_slippers = json.load(self.road)
+            red_slippers = json.loads(self.road)
         except json.JSONDecodeError as e:
             msg = 'PARSING_JSON_ERROR'
             print(msg)
