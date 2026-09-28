@@ -20,14 +20,14 @@ def main():
     stawman = parser_utils.parser_utils('data/devices.json')
     straw = stawman.parse_json()
     brain_1 = network_device.NetworkDevice(
-        name=straw [0]['hostname'],
-        ip_address=straw[0]['ip']
-        device_type=straw[0]['type']
+        name = straw [0]['hostname'],
+        ip_address = straw[0]['ip'],
+        device_type = straw[0]['type']
     )
     brain_2 = network_device.NetworkDevice(
-        name=straw [1]['hostname'],
-        ip_address=straw[1]['ip']
-        device_type=straw[1]['type']
+        name = straw [1]['hostname'],
+        ip_address = straw[1]['ip'],
+        device_type = straw[1]['type']
     )
 
     brain_1.summarize()

@@ -5,16 +5,14 @@
 # Lastly, we will log the results of the parsing process to a log file.
 
 # Try to import logging, csv, json, os, xml.etree.ElementTree, and yaml and have a catch all error except statment.
-try:
-    import logging
-    import csv
-    import json
-    import os
-    import xml.etree.ElementTree as ET
-    import yaml
-    print("Import Successful")
-except ImportError:
-    print("Unable to import one or more imports")        
+
+import logging
+import csv
+import json
+import os
+import xml.etree.ElementTree as ET
+
+
 
 class parser_utils:
 
