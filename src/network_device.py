@@ -14,9 +14,14 @@ class NetworkDevice:
         self.device_type = device_type
 
     def summarize(self):
+
+        print("Network Device Summary:")
+        print("="*50)
         print(f"Device Name: {self.name}")
         print(f"IP Address: {self.ip_address}")
         print(f"Device Type: {self.device_type}")
+        print("="*50)
+        print()
 
     def log_attributes(self):
         msg = f"[DEVICE_SUMMARY]: <{self.name}> (<{self.device_type}>) - <{self.ip_address}>"
